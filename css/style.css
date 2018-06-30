@@ -1,0 +1,138 @@
+*{
+  box-sizing: border-box;
+ }
+body {
+    background-color: #333;
+    font-family: 'Coda';
+ }
+  
+.content{
+  margin: 55px 0;
+}
+
+
+.img-back img{
+ max-width: 100%;;
+ max-height: 100%;
+}
+
+.img-back .overlay{
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: #f1c8c8;
+  opacity:0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+}
+  
+.img-back h2{
+  z-index: 4;
+}
+
+.img-back:hover .overlay,
+.img-back:focus .overlay{
+  opacity:0.7;
+}
+
+
+.center-abs{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    margin: 0;
+  
+  }
+
+.rel{
+    position: relative;
+    width: 70%;
+    min-height: 200px;
+    margin: 12px auto;
+    background: #f1c8c8;
+    transition: all 0.2s ease-in-out;
+  }
+
+.rel:hover,
+.rel:focus{
+    color: #ff054d;
+    cursor: pointer;
+    border: 5px solid transparent;
+    animation: press 0.9s linear ;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  
+@keyframes press {
+    0%{
+      border-top-color: #ff054d;
+      transition-delay: 0.2s;
+     }
+    25%{
+      border-top-color: #ff054d;
+      border-left-color: #ff154d;
+      transition-delay: 0.4s;
+     }
+    50%{
+      border-top-color: #ff054d;
+      border-left-color: #ff054d;
+      border-bottom-color: #ff254d;
+      transition-delay: 0.6s;
+
+     }
+    100%{
+      border-color: #ff354d;
+     }
+  }
+
+
+.nav-bar{
+    position: fixed;
+    top: 0;
+    background: #333333db;
+    width: 100%;
+    padding: 0  13px;
+    z-index: 12;
+  }
+ul.menu{
+    margin: 0 ;
+  }
+ul.menu li{
+      display: inline-block;
+      list-style-type: none;
+      padding:10px 5px;
+      position: relative;
+      border: 2px solid transparent;
+      transition: all 0.5s linear;   
+  }
+
+ul.menu li a{
+  color:#fff;
+  opacity: .8; 
+  text-decoration: unset;
+ }
+
+
+
+ul.menu li::before{
+  content: attr(data-name);
+  color: #fff;
+  position: absolute;
+  width: 0%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  transition: all 0.5s linear;
+}
+
+ul.menu li:hover:before,
+ul.menu li:focus:before{
+  width: 100%;
+}
+ul.menu li:hover,
+ul.menu li:focus{
+  border-bottom-color: #fff;
+}
