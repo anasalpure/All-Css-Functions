@@ -3,13 +3,19 @@
  }
 body {
     background-color: #333;
-    font-family: 'Coda';
+ }
+
+ h1 ,h2 ,h3 ,h4 h5 {
+  font-family: 'Coda';
  }
   
 .content{
   margin: 55px 0;
 }
 
+.focusable{
+  cursor: pointer;
+}
 
 .img-back img{
  max-width: 100%;;
@@ -55,7 +61,9 @@ body {
     background: #f1c8c8;
     transition: all 0.2s ease-in-out;
   }
-
+h3{
+  border: inherit;
+}
 .rel:hover,
 .rel:focus{
     color: #ff054d;

@@ -4,14 +4,19 @@
  * 2. Prevent iOS and IE text size adjust after device orientation change,
  *    without disabling user zoom.
  */
+
  html {
-  font-family: sans-serif;
-  /* 1 */
+  font-family: "Lato",Tahoma, Sans-Serif , "Lucida Sans Unicode" ;
+  line-height: 1.5;
+  font-size: 15px;
+
+
   -ms-text-size-adjust: 100%;
   /* 2 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
 }
+
 /**
  * Remove default margin.
  */
