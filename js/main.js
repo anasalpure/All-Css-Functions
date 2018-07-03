@@ -20,8 +20,7 @@
             //add ARIA accessablitys to parrent of ancher
             element.setAttribute('aria-label',ancher.innerText); 
        }
-         
-   
+
             
 
        
